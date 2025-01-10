@@ -1,0 +1,22 @@
+.header_main{
+    background-color: #162171;
+    color: white;
+    padding: 10px;
+}
+.header{
+    display: flex;
+    justify-content: space-evenly;
+}
+.socialMedia a{
+    font-style: none;
+    color: white;
+}
+.header_info{
+    display: flex;
+    gap: 20px;
+}
+.socialMedia{
+    display: flex;
+    gap: 10px;
+    font-size: small;
+}
