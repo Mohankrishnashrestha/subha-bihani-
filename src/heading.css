@@ -1,4 +1,4 @@
-.header_main{
+/* .header_main{
     padding: 0;
     margin: 0;
     width: 100%;
@@ -51,4 +51,32 @@
 .navicon li:hover{
     color: #1b2dbb;
 
+}
+@media (max-width:600){
+    .header_info{
+        display: none;
+    }
+} */
+.header_main {
+  display: none;
+}
+.res
+.responsive_socialMedia {
+  display: flex;
+  background-color: #162171;
+}
+.responsive_socialMedia a {
+  color: white;
+  padding: 10px;
+  font-size: small;
+}
+.ham_and_title{
+    display: flex;
+}
+.hamburger{
+    position: absolute;
+    right:5px;
+}
+.responsive_navicon{
+    align-items: start;
 }

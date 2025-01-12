@@ -15,14 +15,14 @@ const navigation={
   about:"About Us",
   portfolio:"Portfolio",
   service:"Services",
-  contact:"Contact Us"
+  contact:"Contact Us",
 }
 
 function App() {
   const [content,setContent]=useState("home");
 
   return (
-    <div>
+    <div className="main">
     <Heading header={header} navigation={navigation} setContent={setContent} />
     <Content content={content}/>
     
