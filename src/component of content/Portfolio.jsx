@@ -8,7 +8,7 @@ function Portfolio() {
   //   };
   //   const name2=<div>name:{b.name}</div>
   // const arr=[name, name2];
-  //   array.forEach(element => {
+  //   array.forEach(element => { 
 
   //   });
   const arr = [
@@ -24,11 +24,7 @@ function Portfolio() {
       Portfolio
       <div>
         {arr.forEach((element) => {
-          return <>
-          {
-            element.name
-          }
-          </>;
+          return <>{element.name}</>;
         })}
       </div>
     </div>

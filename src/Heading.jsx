@@ -7,12 +7,15 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import "./heading.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-
+import { useState } from "react";
 
 function Heading({ navigation, header, setContent }) {
   const { technical, phoneNo } = header;
   const { title, home, about, portfolio, service, contact } = navigation;
-
+  const [change, setChange]=useState(false);
+  const toggle=()=>{
+    setChange(!change);
+  }
   return (
     <>
       <div className="header_main">
@@ -42,8 +45,13 @@ function Heading({ navigation, header, setContent }) {
         </div>
 
         <div className="navbar">
-          <div className="title">{title}</div>
-          <div>
+          <div className="title" onClick={() => setContent("home")}>
+            {title}
+          </div>
+          <div className="hamburger" onClick={toggle}>
+            <GiHamburgerMenu />
+          </div>
+          <div className={change?"active":""}>
             <ul className="navicon">
               <li onClick={() => setContent("home")}>{home}</li>
               <li onClick={() => setContent("about")}>{about}</li>
@@ -54,7 +62,7 @@ function Heading({ navigation, header, setContent }) {
           </div>
         </div>
       </div>
-      <div className="responsive_heading">
+      {/* <div className="responsive_heading">
         <div className="responsive_socialMedia">
           <a href="#">
             <IoLogoFacebook />
@@ -87,7 +95,7 @@ function Heading({ navigation, header, setContent }) {
 
         </div>
 
-      </div>
+      </div> */}
     </>
   );
 }

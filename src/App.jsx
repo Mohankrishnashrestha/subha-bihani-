@@ -1,7 +1,5 @@
 
-import { useState } from "react";
 import "./App.css"
-import Content from "./Content";
 import Heading from "./Heading"
 
 const header={
@@ -19,12 +17,10 @@ const navigation={
 }
 
 function App() {
-  const [content,setContent]=useState("home");
 
   return (
     <div className="main">
-    <Heading header={header} navigation={navigation} setContent={setContent} />
-    <Content content={content}/>
+    <Heading header={header} navigation={navigation} />
     
     </div>
 
